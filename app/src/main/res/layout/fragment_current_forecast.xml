@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/forecast_snapshot"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="top"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/icon"
+        android:paddingLeft="@dimen/standard_padding_size"
+        android:paddingRight="@dimen/standard_padding_size"
+        android:paddingBottom="@dimen/standard_padding_size"
+        android:paddingTop="50dp"
+        android:textStyle="bold|italic"
+        android:text="@string/location"
+        android:textSize="@dimen/text_size_large"/>
+
+    <ImageView
+        android:id="@+id/icon"
+        android:contentDescription="@string/weather_image_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/temperature"
+        android:adjustViewBounds="true"
+        android:minHeight="@dimen/min_image_height"
+        android:maxHeight="@dimen/max_image_height"
+        android:minWidth="@dimen/min_image_width"
+        android:maxWidth="@dimen/max_image_width"
+        android:gravity="bottom"
+        android:paddingRight="@dimen/standard_padding_size"
+        android:paddingBottom="@dimen/standard_padding_size"/>
+
+    <TextView
+        android:id="@id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/location"
+        android:paddingLeft="@dimen/standard_padding_size"
+        android:paddingRight="@dimen/standard_padding_size"
+        android:paddingBottom="@dimen/standard_padding_size"
+        android:paddingTop="@dimen/standard_padding_size"
+        android:text="@string/temperature"
+        android:textSize="@dimen/text_size_medium"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/temperature"
+        android:paddingLeft="@dimen/standard_padding_size"
+        android:paddingRight="@dimen/standard_padding_size"
+        android:paddingBottom="@dimen/standard_padding_size"
+        android:paddingTop="@dimen/standard_padding_size"
+        android:text="@string/description"
+        android:textSize="@dimen/text_size_medium"/>
+
+    <TextView
+        android:id="@+id/precipitation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/description"
+        android:paddingLeft="@dimen/standard_padding_size"
+        android:paddingRight="@dimen/standard_padding_size"
+        android:paddingBottom="@dimen/standard_padding_size"
+        android:paddingTop="@dimen/standard_padding_size"
+        android:text="@string/precipitation"
+        android:textSize="@dimen/text_size_medium"/>
+
+</RelativeLayout>

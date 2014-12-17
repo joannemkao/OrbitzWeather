@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">OrbitzWeather</string>
+    <string name="location">Weather in </string>
+    <string name="precipitation">Expected Precipitation (MM): </string>
+    <string name="temperature">Temperature (Fahrenheit): </string>
+    <string name="description">Description: </string>
+    <string name="search">Search for Location </string>
+    <string name="search_hint">enter ZIP code, City, IATA, or IP</string>
+    <string name="future_forecast_title">5 Day Forecast</string>
+    <string name="weather_image_text">Weather Image</string>
+
+</resources>

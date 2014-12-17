@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/forecast_list_item_iconImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/weather_image_text"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/forecast_list_item_dateTextView"
+        android:minHeight="@dimen/min_image_height"
+        android:maxHeight="@dimen/max_image_height"
+        android:minWidth="@dimen/min_image_width"
+        android:maxWidth="@dimen/max_image_width"
+        android:padding="@dimen/list_item_padding_size"/>
+
+    <TextView
+        android:id="@id/forecast_list_item_dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_large"
+        android:padding="@dimen/list_item_padding_size"
+        android:text="Date"/><!-- Not used, dummy string. Adapter provides values -->
+
+    <TextView
+        android:id="@+id/forecast_list_item_tempTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/forecast_list_item_dateTextView"
+        android:textStyle="bold"
+        android:padding="@dimen/list_item_padding_size"
+        android:text="Temperature"
+        /><!-- Not used, dummy string. Adapter provides values -->
+
+    <TextView
+        android:id="@+id/forecast_list_item_precipTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/forecast_list_item_tempTextView"
+        android:padding="@dimen/list_item_padding_size"
+        android:text="Precipitation"/><!-- Not used, dummy string. Adapter provides values -->
+
+    <TextView
+        android:id="@+id/forecast_list_item_descTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/forecast_list_item_precipTextView"
+        android:padding="@dimen/list_item_padding_size"
+        android:text="Weather description"/><!-- Not used, dummy string. Adapter provides values -->
+
+</RelativeLayout>
