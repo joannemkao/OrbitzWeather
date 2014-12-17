@@ -6,7 +6,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -50,8 +49,6 @@ public class CurrentForecastFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_current_forecast, parent, false);
         RelativeLayout mForecastSnapshot = (RelativeLayout)v.findViewById(R.id.forecast_snapshot);
 
-        Log.e(TAG, "fragment created: " + mForecastSummary.getLocation());
-
         mForecastSnapshot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,6 +89,9 @@ public class CurrentForecastFragment extends Fragment {
         if (mForecastSummary == null) mForecastSummary = new ForecastSummary();
 
         mIconImage.setImageBitmap(mForecastSummary.getIcon());
+
+        if (mForecastSummary == null)
+            mForecastSummary = new ForecastSummary();
 
         mTemperatureText.setText(getString(R.string.temperature) + " " + mForecastSummary.getTemperature());
         mLocationText.setText(getString(R.string.location) + " " + mForecastSummary.getLocation().replace('+',' '));

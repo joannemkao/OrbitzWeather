@@ -35,6 +35,8 @@ public class ForecastFetcher {
     public ForecastSummary getForecastData(String searchText) {
 
         String location = cleanSearchText(searchText);
+        if (location == null || location.equals("")) return null;
+
         ForecastSummary f = new ForecastSummary();
         f.setLocation(location);
 
